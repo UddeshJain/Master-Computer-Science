@@ -4,8 +4,6 @@ This repository was created to practice and brush up skills for students who wan
 
 ## Folder Structure
 
----
-
 ### This repository consists of three main directories
 
 - Data Structures
@@ -15,8 +13,6 @@ This repository was created to practice and brush up skills for students who wan
 each directory has further directories for different programming languages
 
 ## How to contribute
-
----
 
 1. Fork this repository
 2. Goto your github account and browse to the repository you forked

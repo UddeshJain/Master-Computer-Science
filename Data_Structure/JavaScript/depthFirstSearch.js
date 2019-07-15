@@ -69,6 +69,20 @@ class BinarySearchTree {
         traverse(this.root)
         return data
     }
+
+    /*
+    * Treverse the tree in Depth First Order with InOrder
+    */
+    DFSInOrder() {
+        var data = []
+        function traverse(node) {
+            if (node.left) traverse(node.left)
+            data.push(node.value)
+            if (node.right) traverse(node.right)
+        }
+        traverse(this.root)
+        return data
+    }
 }
 
 var tree = new BinarySearchTree()
@@ -80,3 +94,4 @@ tree.insert(8)
 tree.insert(20)
 console.log(tree.DFSPreOrder())         // [10, 6, 3, 8, 15, 20]
 console.log(tree.DFSPostOrder())      // [3, 8, 6, 20, 15, 10]
+console.log(tree.DFSInOrder())        // [ 3, 6, 8, 10, 15, 20 ]

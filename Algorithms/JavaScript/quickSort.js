@@ -2,7 +2,7 @@
     * pivot - Place the pivot at correct position returns the index of pivot 
     * @param {arr, start, end} array - To place pivot at correct position
 */
-function pivot(arr, start = 0, end = arr.length - 1) {
+function pivot(arr, start = 0, end = arr.length - 1 ) {
     function swap(arr, i, j) {
         let temp = arr[i]
         arr[i] = arr[j]
@@ -10,7 +10,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     }
     let pivot = arr[start]
     let swapIndex = start
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = start + 1; i < arr.length; i++) {
         if (pivot > arr[i]) {
             swapIndex++
             swap(arr, swapIndex, i)
@@ -19,5 +19,16 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     swap(arr, start, swapIndex)
     return swapIndex
 }
-
-console.log(pivot([4,8,2,1,5,7,6,3]))
+/*
+    * quickSort - Sorts elements of array
+    * @param {arr, start, end} array - To place pivot at correct position
+*/
+function quickSort(arr, left = 0, right = arr.length - 1) {
+    if (left < right) {
+        let pivotIndex = pivot(arr, left, right)
+        quickSort(arr, left, pivotIndex - 1)
+        quickSort(arr, pivotIndex + 1, right)
+    }
+    return arr
+}
+console.log(quickSort([9,4,8,2,1,5,7,6,3]))

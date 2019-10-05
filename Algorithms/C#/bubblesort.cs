@@ -1,6 +1,9 @@
 using System;
 
 namespace Algorithms {
+    /// <summary>
+    /// Sorts collections using the BubbleSort algorithm.
+    /// </summary>
     public static class BubbleSort {
 
         private static void swap(int[] array, int index1, int index2) {

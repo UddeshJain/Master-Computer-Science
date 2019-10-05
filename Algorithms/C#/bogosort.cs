@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApp1.Algorithms {
+namespace Algorithms {
     /// <summary>
     /// Sorts collections using the BogoSort algorithm.
     /// (Only added for educational purposes.)
